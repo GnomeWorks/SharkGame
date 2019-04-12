@@ -23,11 +23,12 @@ $.extend(SharkGame, {
         "Alone in the Shark",
         "Sharkpocalypse",
         "Shark of Darkness",
-        "Strange Oceans"
+        "Strange Oceans",
+		"SharkWorks",
     ],
     GAME_NAME: null,
     ACTUAL_GAME_NAME: "Shark Game",
-    VERSION: 0.71,
+    VERSION: 0.71.1,
     VERSION_NAME: "Stranger Oceans",
     EPSILON: 1E-6, // floating point comparison is a joy
 
@@ -51,7 +52,8 @@ $.extend(SharkGame, {
     "<p>It was made by <a href='http://cirri.al'>Cirr</a> who needs to update his website.<br/>" +
     "He has a rarely updated <a href='https://twitter.com/Cirrial'>Twitter</a> though.</p>" +
     "<p>Additional code and credit help provided by Dylan and Sam Red.<br/>" +
-    "<span class='smallDesc'>Dylan is also graciously hosting this game.</span></p>",
+    "<span class='smallDesc'>Dylan is also graciously hosting this game.</span></p>" +
+	"<p>Further modifications brought to you by GnomeWorks.<br/>",
 
 
     ending: "<p>Congratulations! You did it.<br/>You saved the sharks!</p>" +

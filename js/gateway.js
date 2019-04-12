@@ -122,9 +122,9 @@ SharkGame.Gateway = {
         gatewayContent.append($('<p>').html("Something unseen says,").addClass("medDesc"));
         gatewayContent.append($('<em>').attr("id", "gatewayVoiceMessage").html(g.getVoiceMessage()));
         if(essenceRewarded > 0) {
-            gatewayContent.append($('<p>').html("Entering this place has changed you, granting you <span class='essenceCount'>" + m.beautify(essenceRewarded) + "</span> essence."));
+            gatewayContent.append($('<p>').html("Entering this place has changed you, granting you <span class='essenceCount'>" + essenceRewarded + "</span> essence."));
         }
-        gatewayContent.append($('<p>').html("You have <span id='essenceHeldDisplay' class='essenceCount'>" + m.beautify(essenceHeld) + "</span> essence."));
+        gatewayContent.append($('<p>').html("You have <span id='essenceHeldDisplay' class='essenceCount'>" + essenceHeld + "</span> essence."));
         if(numenHeld > 0) {
             var numenName = (numenHeld > 1) ? "numina" : "numen";
             gatewayContent.append($('<p>').html("You also have <span class='numenCount'>" + m.beautify(numenHeld) + "</span> " + numenName + ", and you radiate divinity."));
@@ -165,7 +165,7 @@ SharkGame.Gateway = {
         // construct the gateway content
         var gatewayContent = $('<div>');
         gatewayContent.append($('<p>').html("Your will flows into solid shapes beyond your control.<br>Focus."));
-        gatewayContent.append($('<p>').html("You have <span id='essenceHeldDisplay' class='essenceCount'>" + m.beautify(essenceHeld) + "</span> essence."));
+        gatewayContent.append($('<p>').html("You have <span id='essenceHeldDisplay' class='essenceCount'>" + essenceHeld + "</span> essence."));
         gatewayContent.append($('<p>').attr("id", "gatewayStatusMessage").addClass("medDesc"));
 
         // show artifact pool
@@ -349,7 +349,7 @@ SharkGame.Gateway = {
             } else {
                 gatewayStatusMessageSel.html("Your will crystallises into the " + artifactData.name + ", at power " + artifactData.level + ".");
             }
-            $('#essenceHeldDisplay').html(SharkGame.Main.beautify(SharkGame.Resources.getResource("essence")));
+            $('#essenceHeldDisplay').html(SharkGame.Resources.getResource("essence"));
         }
         // disable button until next frame
         button.prop("disabled", true);
@@ -376,7 +376,7 @@ SharkGame.Gateway = {
                     "<br>" + artifactData.desc +
                     "<br><br><span class='medDesc'>" + artifactData.flavour + "</span><br>";
                 if(!maxedOut) {
-                    label += "</span><br>Cost: <span class='essenceCountBrighter'>" + m.beautify(cost) + "</span> essence";
+                    label += "</span><br>Cost: <span class='essenceCountBrighter'>" + cost + "</span> essence";
                 }
                 button.prop("disabled", !enableButton).html(label);
 
@@ -439,7 +439,7 @@ SharkGame.Gateway = {
                 });
                 var deeperPlanetData = SharkGame.WorldTypes[planetData.type];
                 var label = deeperPlanetData.name +
-                    "<br><span class='medDesc'>( Climate Level " + m.beautify(planetLevel) + " )</span>" +
+                    "<br><span class='medDesc'>( Climate Level " + planetLevel + " )</span>" +
                     "<br>" + deeperPlanetData.desc;
 
                 buttonSel.html(label);
