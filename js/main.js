@@ -24,7 +24,7 @@ $.extend(SharkGame, {
         "Sharkpocalypse",
         "Shark of Darkness",
         "Strange Oceans",
-		"SharkWorks",
+		"SharkWorks"
     ],
     GAME_NAME: null,
     ACTUAL_GAME_NAME: "Shark Game",
